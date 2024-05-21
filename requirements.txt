@@ -1,5 +1,4 @@
 tensorflow
-python
 numpy
 pandas
 scikit_learn
