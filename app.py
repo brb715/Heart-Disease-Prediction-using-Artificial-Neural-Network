@@ -250,9 +250,9 @@ def thr(P):
     with st.spinner('Model Training...'):
         ann3 = tf.keras.models.Sequential()
         ann3.add(tf.keras.layers.Dense(units = 16, activation ='relu'))
-        ann3.add(tf.keras.layers.Dropout(0, 0.3))
+        ann3.add(tf.keras.layers.Dropout(0.3))
         ann3.add(tf.keras.layers.Dense(units = 4, activation ='relu'))
-        ann3.add(tf.keras.layers.Dropout(0, 0.3))
+        ann3.add(tf.keras.layers.Dropout(0.3))
         ann3.add(tf.keras.layers.Dense(units = 1, activation ='sigmoid'))
         ann3.compile(loss = 'binary_crossentropy', metrics = ['accuracy'], optimizer = 'adam')
         history3 = ann3.fit(X_train, y_train, validation_data=(X_test, y_test), batch_size = 32, epochs = 100)
